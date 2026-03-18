@@ -4,7 +4,7 @@ Plataforma web para la publicación y gestión de empleos, desarrollada con Lara
 
 ---
 
-## 🚀 Tecnologías
+## 🐘 Tecnologías
 
 - Laravel
 - Livewire

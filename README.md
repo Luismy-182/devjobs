@@ -29,7 +29,7 @@ Plataforma web para la publicación y gestión de empleos, desarrollada con Lara
 
 ## 🧠 Arquitectura
 
-- Patrón MVC (Laravel)
+- Patrón de arquitectura Modelo-Vista-Controlador (Laravel)
 - Componentes dinámicos con Livewire
 - ORM con Eloquent
 - Manejo de autenticación con Laravel Breeze

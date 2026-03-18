@@ -1,32 +1,47 @@
-# DevJobs
-Aplicación web monolítica para publicar empleos de desarrolladores web, permite postulaciones a los usuarios, una vista pública para las publicaciones de empleo, carga de archivos, así como también una zona administrativa para los reclutadores, donde puede obtener conocer a los postulantes y su información de contacto como también el CV, creado con Laravel 9, breeze, y Livewire en el frontend con tailwindcss
+# DevJobs 💼
 
+Plataforma web para la publicación y gestión de empleos, desarrollada con Laravel. Permite a empresas publicar vacantes y a usuarios explorar oportunidades laborales mediante una interfaz clara y dinámica.
 
-Nota para el dev: si al subir a un hosting no muestra las imágenes almacenadas, pero sí localmente, entonces estamos ante un problema de permisos en la carpeta storage
-dar permisos 777 a carpeta /storage y carpeta de enlace /public/storage
-Adicionalmente crear un archivo .httaccess el la raíz del proyecto con mi siguiente configuración:
+---
 
-<IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-        </IfModule>
+## 🚀 Tecnologías
 
+- Laravel
+- Livewire
+- TailwindCSS
+- Laravel Breeze
+- Eloquent ORM
+- MySQL
 
-        RewriteEngine On
+---
 
-        RewriteCont %{HTTP:Autorization} .
-        RewriteRule .* [E=HTTP_Autorization:%{HTTP:Autorization}]
+## ✨ Funcionalidades
 
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteCond %{REQUEST_URI} (.+)/$
+- Autenticación de usuarios
+- Gestión de roles (reclutador / usuario)
+- Publicación de vacantes
+- Edición y eliminación de ofertas
+- Panel administrativo
+- Visualización detallada de vacantes
+- Interfaz dinámica con Livewire (sin recargas completas)
 
-        RewriteRule ^ %1 [L,R=301]
+---
 
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteCond %{REQUEST_FILENAME} !-f
+## 🧠 Arquitectura
 
-        RewriteRule ^ index.php[L]
-</IfModule>
+- Patrón MVC (Laravel)
+- Componentes dinámicos con Livewire
+- ORM con Eloquent
+- Manejo de autenticación con Laravel Breeze
+---
 
+## ⚙️ Instalación
 
-
+```bash
+git clone https://github.com/Luismy-182/devjobs-platform.git
+cd devjobs
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve

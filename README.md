@@ -39,7 +39,7 @@ Plataforma web para la publicación y gestión de empleos, desarrollada con Lara
 
 ```bash
 git clone https://github.com/Luismy-182/devjobs-platform.git
-cd devjobs
+cd devjobs-platform
 composer install
 cp .env.example .env
 php artisan key:generate
